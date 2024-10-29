@@ -1,0 +1,99 @@
+.nav {
+    width: 100%;
+    padding: 20px 60px 13px;
+    border-bottom: 1px solid #222499;
+
+    .loginSingUpBtns {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 22px;
+        color: var(--gray1-color);
+        margin-bottom: 19px;
+        width: 100%;
+        height: 26px;
+
+        .btnsWrapper {
+            display: flex;
+
+            .loginBtn {
+                display: flex;
+                align-items: center;
+
+                >img {
+                    margin-right: 6px;
+                    height: 18.44px;
+                }
+            }
+
+            .verticalLine {
+                margin: 0 26px 0 26px;
+            }
+
+            .signUpBtn {
+                display: flex;
+                align-items: center;
+
+                >img {
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+
+    .navLinks {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            position: relative;
+            margin-right: 201px;
+            flex-shrink: 0;
+
+            &::after {
+                content: "";
+                background-image: url("/logo-icon.png");
+                position: absolute;
+                top: -60px;
+                right: -67px;
+                width: 118px;
+                aspect-ratio: 1/1;
+                z-index: -1;
+            }
+        }
+
+        .link_list {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 25px;
+
+            li {
+                white-space: nowrap;
+                position: relative;
+
+                &.current {
+                    color: var(--blue1-color);
+
+                    &::after {
+                        display: inline-block;
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate3d(-50%, -50%, 0);
+                        border: 1px solid;
+                        border-radius: 18px;
+                        width: 218%;
+                        height: 120%;
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
