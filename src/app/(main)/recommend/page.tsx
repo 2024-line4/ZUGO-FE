@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Recommend() {
-  return <div>추천 페이지</div>;
+  return <div className="bg-red-500">추천 페이지</div>;
 }
