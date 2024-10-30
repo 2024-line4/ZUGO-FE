@@ -10,6 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        footerBg: "var(--footer-bg-color)",
+
         gray1: "var(--gray1-color)",
         blue1: "var(--blue1-color)",
       },

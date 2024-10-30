@@ -6,6 +6,8 @@
 
     /* css variable set */
     :root {
+        --footer-bg-color: #F1F1FF;
+
         --gray1-color: #9C9C9C;
         --blue1-color: #222499;
     }
