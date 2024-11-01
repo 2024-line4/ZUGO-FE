@@ -19,32 +19,9 @@
         min-height: 100dvh;
     }
 
-    body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 674px;
-        height: 381px;
-        background-image: url("/common-bg-circle-inner.png");
-        z-index: -99998;
-    }
-
-    body::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 713px;
-        height: 416px;
-        background-image: url("/common-bg-circle-outer.png");
-        z-index: -99999;
-    }
-
     li,
     ol {
         list-style: none;
     }
-
 
 }
