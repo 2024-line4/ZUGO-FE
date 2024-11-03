@@ -21,11 +21,11 @@ export default function NavLinks() {
         <li className={`${url === "/recommend" ? style.current : ""}`}>
           <Link href="/recommend">인기추천</Link>
         </li>
-        <li>
-          <Link href="/">학교정보</Link>
+        <li className={`${url === "/school" ? style.current : ""}`}>
+          <Link href="/school">학교정보</Link>
         </li>
-        <li>
-          <Link href="/">기숙사</Link>
+        <li className={`${url === "/dormitory" ? style.current : ""}`}>
+          <Link href="/dormitory">기숙사</Link>
         </li>
         <li>
           <Link href="/">내정보</Link>

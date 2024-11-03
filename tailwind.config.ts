@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        placehorderTextColor: "var(--placeholder-text-color)",
         footerBg: "var(--footer-bg-color)",
 
         gray1: "var(--gray1-color)",

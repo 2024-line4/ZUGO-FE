@@ -49,17 +49,6 @@
             position: relative;
             margin-right: 201px;
             flex-shrink: 0;
-
-            &::after {
-                content: "";
-                background-image: url("/logo-icon.png");
-                position: absolute;
-                top: -60px;
-                right: -67px;
-                width: 118px;
-                aspect-ratio: 1/1;
-                z-index: -1;
-            }
         }
 
         .link_list {

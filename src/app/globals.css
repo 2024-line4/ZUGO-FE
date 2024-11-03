@@ -7,6 +7,7 @@
     /* css variable set */
     :root {
         --footer-bg-color: #F1F1FF;
+        --placeholder-text-color: #707070;
 
         --gray1-color: #9C9C9C;
         --blue1-color: #222499;
@@ -24,4 +25,9 @@
         list-style: none;
     }
 
+    input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
 }
