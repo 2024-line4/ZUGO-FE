@@ -19,14 +19,16 @@ export default function DefineBgImage({ children }: Readonly<Props>) {
       {url !== "/" && (
         <>
           <Image
-            className="absolute top-0 left-0 z-[-998] "
+            className="absolute left-0 top-0 z-[-998]"
             src={NotMainBgCircleInner}
             alt="inner-circle"
+            priority
           />
           <Image
-            className="absolute top-0 left-0  z-[-999]"
+            className="absolute left-0 top-0 z-[-999]"
             src={NotMainBgCircleOuter}
             alt="outer-circle"
+            priority
           />
         </>
       )}
@@ -34,7 +36,8 @@ export default function DefineBgImage({ children }: Readonly<Props>) {
         <Image
           alt="mainBg"
           src={mainBg}
-          className="absolute top-0 left-0 z-[-999] w-screen h-[561px]"
+          className="absolute left-0 top-0 z-[-999] h-[561px] w-screen"
+          priority
         />
       )}
       {children}

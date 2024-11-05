@@ -1,18 +1,18 @@
 export const countries: Record<string, string[]> = {
-  대한민국: ["서울", "부산", "대구"],
-  미국: ["뉴욕", "로스앤젤레스", "보스턴", "시카고", "샌프란시스코"],
-  캐나다: ["토론토", "밴쿠버", "몬트리올"],
-  영국: ["런던", "맨체스터", "에든버러"],
-  호주: ["시드니", "멜버른", "브리즈번"],
-  독일: ["베를린", "뮌헨", "프랑크푸르트", "함부르크"],
-  프랑스: ["파리", "리옹", "마르세유"],
-  일본: ["도쿄", "오사카", "교토"],
-  중국: ["베이징", "상하이", "광저우"],
-  싱가포르: ["싱가포르"],
-  스웨덴: ["스톡홀름", "고텐버그"],
-  네덜란드: ["암스테르담", "로테르담"],
-  스페인: ["바르셀로나", "마드리드", "세비야"],
-  이탈리아: ["로마", "밀라노", "피렌체"],
+  KR: ["서울", "부산", "대구"],
+  US: ["뉴욕", "로스앤젤레스", "보스턴", "시카고", "샌프란시스코"],
+  CA: ["토론토", "밴쿠버", "몬트리올"],
+  UK: ["런던", "맨체스터", "에든버러"],
+  AU: ["시드니", "멜버른", "브리즈번"],
+  DE: ["베를린", "뮌헨", "프랑크푸르트", "함부르크"],
+  FR: ["파리", "리옹", "마르세유"],
+  JP: ["도쿄", "오사카", "교토"],
+  CN: ["베이징", "상하이", "광저우"],
+  SG: ["싱가포르"],
+  SE: ["스톡홀름", "고텐버그"],
+  NL: ["암스테르담", "로테르담"],
+  ES: ["바르셀로나", "마드리드", "세비야"],
+  IT: ["로마", "밀라노", "피렌체"],
 };
 
 export const countryCodes: Record<string, string> = {
@@ -32,7 +32,7 @@ export const countryCodes: Record<string, string> = {
   이탈리아: "IT",
 };
 
-const regionCode: Record<string, string> = {
+export const regionCode: Record<string, string> = {
   서울: "SEOUL",
   부산: "BUSAN",
   대구: "DAEGU",
@@ -75,11 +75,3 @@ const regionCode: Record<string, string> = {
   밀라노: "MILAN",
   피렌체: "FLORENCE",
 };
-
-export function getCountryCode(country: string): string {
-  return countryCodes[country];
-}
-
-export function getRegionCode(aria: string): string {
-  return regionCode[aria];
-}
