@@ -13,8 +13,71 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { countries, countryCodes, regionCode } from "@/lib/mappingCode";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useState } from "react";
 
 export default function SearchAndFilter() {
+  const searchParams = useSearchParams();
+  const currentUrl = usePathname();
+
+  // 쿼리 스트링 중 country를 설정하는 state 값
+  const [countryParam, setCountryParam] = useState<string>(
+    searchParams.get("country") || "",
+  );
+
+  // 쿼리 스트링 중 region을 설정하는 state 값
+  const [regionParam, setRegionParam] = useState<string>(
+    searchParams.get("region") || "",
+  );
+  const router = useRouter();
+
+  // filter를 설정하는 함수: 위 useState 값을 설정한다
+  const handleFilter = (option: string, value?: string) => {
+    switch (option) {
+      //전체 버튼을 클릭했을 경우
+      case "All":
+        setCountryParam("");
+        setRegionParam("");
+        router.push(currentUrl === "/school" ? "/school" : "/dormitory");
+        break;
+      //country를 설정했을 경우
+      case "country":
+        setRegionParam("");
+        setCountryParam(value!);
+        break;
+      //region을 설정했을 경우
+      case "region":
+        setRegionParam(value!);
+        break;
+    }
+  };
+
+  //설정된 state 값으로 쿼리 스트링을 설정한다
+  const handleParams = () => {
+    let newParam = {};
+    if (countryParam) {
+      newParam = {
+        country: countryParam,
+      };
+    }
+
+    if (regionParam) {
+      newParam = {
+        ...newParam,
+        region: regionParam,
+      };
+    }
+
+    const newUrl = new URLSearchParams(newParam).toString();
+    const currentUrl = window.location.search;
+
+    //현재 url과 새로운 url이 차이가 없을 시에만 필터 적용(같은 필터의 데이터 fetch 방지)
+    if (`?${newUrl}` !== currentUrl) {
+      router.push(`?${newUrl}`);
+    }
+  };
+
   return (
     <section className={style.searchAndFilter}>
       <div className={style.search}>
@@ -27,66 +90,77 @@ export default function SearchAndFilter() {
       </div>
       <ul className={style.filter}>
         <li>
-          <Button className="h-full px-[35px] py-[6px] text-[23px]">
+          <Button
+            onClick={() => handleFilter("All")}
+            className="h-full px-[35px] py-[6px] text-[23px]"
+          >
             전체
           </Button>
         </li>
         <li>
-          <Select>
+          <Select
+            value={countryParam}
+            onValueChange={(value) => handleFilter("country", value)}
+          >
             <SelectTrigger className="flex h-full min-w-[109px] items-center text-[23px]">
               <SelectValue placeholder="국가" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
                 <SelectLabel className="text-[20px]">국가</SelectLabel>
-                <SelectItem className="text-[20px]" value="apple">
-                  Apple
-                </SelectItem>
-                <SelectItem className="text-[20px]" value="banana">
-                  Banana
-                </SelectItem>
-                <SelectItem className="text-[20px]" value="blueberry">
-                  Blueberry
-                </SelectItem>
-                <SelectItem className="text-[20px]" value="grapes">
-                  Grapes
-                </SelectItem>
-                <SelectItem className="text-[20px]" value="pineapple">
-                  Pineapple
-                </SelectItem>
+                {Object.entries(countryCodes)
+                  .sort((a, b) => a[0].localeCompare(b[0]))
+                  .map((country) => (
+                    <SelectItem
+                      key={country[1]}
+                      className="text-[20px]"
+                      value={country[1]}
+                    >
+                      {country[0]}
+                    </SelectItem>
+                  ))}
               </SelectGroup>
             </SelectContent>
           </Select>
         </li>
         <li>
-          <Select>
+          <Select
+            value={regionParam}
+            onValueChange={(value) => handleFilter("region", value)}
+          >
             <SelectTrigger className="flex h-full min-w-[109px] items-center text-[23px]">
               <SelectValue placeholder="지역" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
                 <SelectLabel className="text-[20px]">지역</SelectLabel>
-                <SelectItem className="text-[20px]" value="apple">
-                  Apple
-                </SelectItem>
-                <SelectItem className="text-[20px]" value="banana">
-                  Banana
-                </SelectItem>
-                <SelectItem className="text-[20px]" value="blueberry">
-                  Blueberry
-                </SelectItem>
-                <SelectItem className="text-[20px]" value="grapes">
-                  Grapes
-                </SelectItem>
-                <SelectItem className="text-[20px]" value="pineapple">
-                  Pineapple
-                </SelectItem>
+                {countryParam
+                  ? countries[countryParam]
+                      .sort((a, b) => a.localeCompare(b))
+                      .map((region) => (
+                        <SelectItem
+                          className="text-[20px]"
+                          key={regionCode[region]}
+                          value={regionCode[region] || ""}
+                        >
+                          {region}
+                        </SelectItem>
+                      ))
+                  : Object.entries(regionCode).map((region) => (
+                      <SelectItem
+                        className="text-[20px]"
+                        key={region[1]}
+                        value={region[1] || ""}
+                      >
+                        {region[0]}
+                      </SelectItem>
+                    ))}
               </SelectGroup>
             </SelectContent>
           </Select>
         </li>
         <li>
-          <Button className="relative h-full w-[50px]">
+          <Button onClick={handleParams} className="relative h-full w-[50px]">
             <Image src={searchIcon} alt="search.svg" />
           </Button>
         </li>

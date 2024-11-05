@@ -9,7 +9,12 @@ export default function LoginAndSignUpBtns() {
     <div className={style.loginSingUpBtns}>
       <div className={style.btnsWrapper}>
         <button className={style.loginBtn}>
-          <Image src={loginIcon} alt="loginIcon.png" />
+          <Image
+            width={18}
+            height={18.44}
+            src={loginIcon}
+            alt="loginIcon.png"
+          />
           <span>로그인</span>
         </button>
         <span className={style.verticalLine}>

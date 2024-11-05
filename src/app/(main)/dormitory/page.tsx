@@ -1,3 +1,10 @@
+import SearchAndFilter from "../_components/(searchAndFilter)/searchAndFilter";
+
 export default function Dormitory() {
-  return <>기숙사 페이지</>;
+  return (
+    <>
+      <SearchAndFilter />
+      기숙사 페이지
+    </>
+  );
 }
