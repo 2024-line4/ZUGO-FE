@@ -1,15 +1,7 @@
 import SearchAndFilter from "../_components/(searchAndFilter)/searchAndFilter";
 import SchoolList from "./_components/SchoolList";
 
-type Props = {
-  searchParams: Promise<{
-    country?: string;
-    region?: string;
-  }>;
-};
-
-export default async function School({ searchParams }: Props) {
-  const { country, region } = await searchParams;
+export default async function School() {
   return (
     <>
       {/* 학교 정보 페이지 */}
