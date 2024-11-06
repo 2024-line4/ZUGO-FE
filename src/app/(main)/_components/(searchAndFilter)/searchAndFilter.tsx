@@ -105,7 +105,7 @@ export default function SearchAndFilter() {
             <SelectTrigger className="flex h-full min-w-[109px] items-center text-[23px]">
               <SelectValue placeholder="국가" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white">
               <SelectGroup>
                 <SelectLabel className="text-[20px]">국가</SelectLabel>
                 {Object.entries(countryCodes)
@@ -113,7 +113,7 @@ export default function SearchAndFilter() {
                   .map((country) => (
                     <SelectItem
                       key={country[1]}
-                      className="text-[20px]"
+                      className="cursor-pointer text-[20px] hover:bg-slate-100"
                       value={country[1]}
                     >
                       {country[0]}
@@ -131,7 +131,7 @@ export default function SearchAndFilter() {
             <SelectTrigger className="flex h-full min-w-[109px] items-center text-[23px]">
               <SelectValue placeholder="지역" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="bg-white">
               <SelectGroup>
                 <SelectLabel className="text-[20px]">지역</SelectLabel>
                 {countryParam
@@ -139,7 +139,7 @@ export default function SearchAndFilter() {
                       .sort((a, b) => a.localeCompare(b))
                       .map((region) => (
                         <SelectItem
-                          className="text-[20px]"
+                          className="cursor-pointer text-[20px] hover:bg-slate-100"
                           key={regionCode[region]}
                           value={regionCode[region] || ""}
                         >
