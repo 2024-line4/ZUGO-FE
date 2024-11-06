@@ -16,7 +16,7 @@ export default async function School({ searchParams }: Props) {
       {/* 필터 부분 */}
       <SearchAndFilter />
       {/* 학교 리스트 부분 */}
-      <SchoolList country={country} region={region} />
+      <SchoolList />
     </>
   );
 }
