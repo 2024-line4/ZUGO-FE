@@ -1,19 +1,27 @@
 import { SchoolType } from "@/types/schoolType";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
-type Props = {
+type GetSchoolProps = {
   country: string | null;
   region: string | null;
 };
 
-export function useGetSchool({ country, region }: Props) {
+// api의 response 타입에 따라 수정
+// 밑의 SchoolType도 마찬가지
+type GetSchoolResponseType = Promise<{
+  message: string;
+  school: SchoolType[];
+  totalData: number;
+}>;
+
+export function useGetSchool({ country, region }: GetSchoolProps) {
   return useInfiniteQuery({
     queryKey: ["school", country, region],
     queryFn: async ({
       pageParam,
     }: {
       pageParam: number;
-    }): Promise<{ message: string; school: SchoolType[] }> => {
+    }): GetSchoolResponseType => {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/getSchool?country=${country}&region=${region}&page=${pageParam}`,
       );

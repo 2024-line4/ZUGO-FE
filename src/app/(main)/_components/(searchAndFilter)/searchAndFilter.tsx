@@ -69,12 +69,14 @@ export default function SearchAndFilter() {
       };
     }
 
-    const newUrl = new URLSearchParams(newParam).toString();
-    const currentUrl = window.location.search;
+    const newUrl = new URLSearchParams(newParam);
 
     //현재 url과 새로운 url이 차이가 없을 시에만 필터 적용(같은 필터의 데이터 fetch 방지)
-    if (`?${newUrl}` !== currentUrl) {
-      router.push(`?${newUrl}`);
+    if (
+      newUrl.get("country") !== searchParams.get("country") ||
+      newUrl.get("region") !== searchParams.get("region")
+    ) {
+      router.push(`?${newUrl.toString()}`);
     }
   };
 
@@ -148,7 +150,7 @@ export default function SearchAndFilter() {
                       ))
                   : Object.entries(regionCode).map((region) => (
                       <SelectItem
-                        className="text-[20px]"
+                        className="cursor-pointer text-[20px] hover:bg-slate-100"
                         key={region[1]}
                         value={region[1] || ""}
                       >

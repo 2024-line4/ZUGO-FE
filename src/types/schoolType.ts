@@ -1,5 +1,5 @@
 export type SchoolType = {
-  id: number;
+  id: string;
   schoolName: string;
   country: string;
   region: string;
