@@ -1,10 +1,12 @@
 "use client";
 
-import { useGetSchool } from "@/hooks/useGetSchool";
+import { useGetSchool } from "@/hooks/queries";
 import { useSearchParams } from "next/navigation";
 import SchoolCard from "./SchoolCard";
-import { Fragment, useCallback, useRef } from "react";
+import { useCallback, useRef } from "react";
 import { SyncLoader } from "react-spinners";
+import defineSort from "../_lib/defineSort";
+import SelectSort from "./SelectSort";
 
 export default function SchoolList() {
   const searchParams = useSearchParams();
@@ -17,6 +19,11 @@ export default function SchoolList() {
       country,
       region,
     });
+
+  const flatData = defineSort(
+    data?.pages.flatMap((page) => page.school) || [],
+    searchParams.get("sortBy") || "students",
+  );
 
   const loadNextPageWithDelay = useCallback(() => {
     setTimeout(() => {
@@ -41,18 +48,13 @@ export default function SchoolList() {
 
   return (
     <>
-      <ul className="mt-[35px] grid min-h-[350px] min-w-[1050px] grid-cols-4 gap-[37px]">
-        {data?.pages.map((page, i) => (
-          <Fragment key={i}>
-            {page.school.map((sch) => (
-              <SchoolCard key={sch.id} sch={sch} />
-            ))}
-          </Fragment>
-        ))}
+      <SelectSort totalData={data?.pages[0].totalData!} />
+      <ul className="grid min-h-[350px] min-w-[1050px] grid-cols-4 gap-[37px]">
+        {flatData?.map((sch) => <SchoolCard key={sch.id} sch={sch} />)}
       </ul>
       <div
         ref={observer}
-        className="my-3 flex min-w-[1070px] items-center justify-center text-2xl"
+        className="my-3 flex min-w-[1080px] items-center justify-center text-2xl"
       >
         {isFetchingNextPage ? (
           <></>

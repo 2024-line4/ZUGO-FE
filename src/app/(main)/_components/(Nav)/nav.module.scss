@@ -63,6 +63,13 @@
             li {
                 white-space: nowrap;
                 position: relative;
+                cursor: pointer;
+
+                &:not(.current):hover {
+                    color: var(--blue1-color);
+                    text-decoration: underline;
+                    text-underline-offset: 8px
+                }
 
                 &.current {
                     color: var(--blue1-color);

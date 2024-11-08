@@ -13,6 +13,8 @@ const getSchool = (req, res) => {
       school = school.filter((sch) => sch.region === region);
     }
 
+    const totalData = school.length;
+
     const start = (page - 1) * 12;
     const end = start + 12;
 
@@ -21,6 +23,7 @@ const getSchool = (req, res) => {
     res.status(200).json({
       message: "get school 성공",
       school,
+      totalData,
     });
   } catch (error) {
     res.status(400).json({
