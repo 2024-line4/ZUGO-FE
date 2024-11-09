@@ -10,8 +10,8 @@ import SelectSort from "./SelectSort";
 
 export default function SchoolList() {
   const searchParams = useSearchParams();
-  const country: string | null = searchParams.get("country");
-  const region: string | null = searchParams.get("region");
+  const country: string = searchParams.get("country") || "";
+  const region: string = searchParams.get("region") || "";
   const loader = useRef<IntersectionObserver | null>(null);
 
   const { data, isFetching, hasNextPage, fetchNextPage, isFetchingNextPage } =

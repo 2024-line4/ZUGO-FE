@@ -15,6 +15,7 @@ type GetSchoolResponseType = Promise<{
 }>;
 
 export function useGetSchool({ country, region }: GetSchoolProps) {
+  console.log(country, region);
   return useInfiniteQuery({
     queryKey: ["school", country, region],
     queryFn: async ({

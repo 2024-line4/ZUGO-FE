@@ -5,11 +5,11 @@ const getSchool = (req, res) => {
   const { country, region, page } = req.query;
 
   try {
-    if (country !== "null") {
+    if (country !== "") {
       school = school.filter((sch) => sch.country === country);
     }
 
-    if (region !== "null") {
+    if (region !== "") {
       school = school.filter((sch) => sch.region === region);
     }
 
