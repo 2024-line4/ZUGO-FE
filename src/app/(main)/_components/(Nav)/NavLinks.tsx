@@ -24,7 +24,7 @@ export default function NavLinks() {
         <li className={`${url.startsWith("/school") ? style.current : ""}`}>
           <Link href="/school">학교정보</Link>
         </li>
-        <li className={`${url === "/dormitory" ? style.current : ""}`}>
+        <li className={`${url.startsWith("/dormitory") ? style.current : ""}`}>
           <Link href="/dormitory">기숙사</Link>
         </li>
         <li className={`${url === "/mypage" ? style.current : ""}`}>

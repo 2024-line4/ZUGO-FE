@@ -1,4 +1,4 @@
-import { SchoolType } from "@/types/schoolType";
+import { SchoolType } from "@/types/SchoolType";
 
 export default function defineSort(
   data: SchoolType[],
