@@ -1,30 +1,29 @@
-import { SchoolType } from "@/types/schoolType";
+import { DormitoryCardType } from "@/types/DormitoryType";
+import { SchoolCardType } from "@/types/SchoolType";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
-type GetSchoolProps = {
-  country: string | null;
-  region: string | null;
+type GetDataProps = {
+  country: string;
+  region: string;
 };
 
-// api의 response 타입에 따라 수정
-// 밑의 SchoolType도 마찬가지
+// 학교 정보 받아오는 쿼리문
+
 type GetSchoolResponseType = Promise<{
-  message: string;
-  school: SchoolType[];
+  schools: SchoolCardType[];
   totalData: number;
 }>;
 
-export function useGetSchool({ country, region }: GetSchoolProps) {
-  console.log(country, region);
+export function useGetSchool({ country, region }: GetDataProps) {
   return useInfiniteQuery({
-    queryKey: ["school", country, region],
+    queryKey: ["schools", country, region],
     queryFn: async ({
       pageParam,
     }: {
       pageParam: number;
     }): GetSchoolResponseType => {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/getSchool?country=${country}&region=${region}&page=${pageParam}`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/univ/list?country=${country}&region=${region}&page=${pageParam}`,
       );
 
       if (!response.ok) {
@@ -37,7 +36,44 @@ export function useGetSchool({ country, region }: GetSchoolProps) {
     staleTime: 60 * 1000,
     initialPageParam: 1,
     getNextPageParam: (lastPage, _, lastPageParam) => {
-      if (lastPage.school.length !== 12) {
+      if (lastPage.schools.length !== 12) {
+        return undefined;
+      }
+
+      return lastPageParam + 1;
+    },
+  });
+}
+
+type GetDormitoryResponseType = Promise<{
+  dormitory: DormitoryCardType[];
+  totalData: number;
+}>;
+
+//기숙사 정보 받아오는 쿼리문
+export function useGetDormitory({ country, region }: GetDataProps) {
+  return useInfiniteQuery({
+    queryKey: ["dormitory", country, region],
+    queryFn: async ({
+      pageParam,
+    }: {
+      pageParam: number;
+    }): GetDormitoryResponseType => {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/dormitory/list?country=${country}&region=${region}&page=${pageParam}`,
+      );
+
+      if (!response.ok) {
+        throw new Error("GET Dormitory HTTP ERROR");
+      }
+
+      return response.json();
+    },
+    gcTime: 300 * 1600,
+    staleTime: 60 * 1000,
+    initialPageParam: 1,
+    getNextPageParam: (lastPage, _, lastPageParam) => {
+      if (lastPage.dormitory.length !== 12) {
         return undefined;
       }
 

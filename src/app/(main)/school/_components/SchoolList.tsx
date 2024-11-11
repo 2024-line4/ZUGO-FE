@@ -2,11 +2,12 @@
 
 import { useGetSchool } from "@/hooks/queries";
 import { useSearchParams } from "next/navigation";
-import SchoolCard from "./SchoolCard";
 import { useCallback, useRef } from "react";
 import { SyncLoader } from "react-spinners";
 import defineSort from "../_lib/defineSort";
-import SelectSort from "./SelectSort";
+import SelectSort from "../../_components/(searchAndFilter)/SelectSort";
+import { SchoolCardType } from "@/types/SchoolType";
+import ListCard from "../../_components/ListCard";
 
 export default function SchoolList() {
   const searchParams = useSearchParams();
@@ -21,7 +22,7 @@ export default function SchoolList() {
     });
 
   const flatData = defineSort(
-    data?.pages.flatMap((page) => page.school) || [],
+    data?.pages.flatMap((page) => page.schools) || [],
     searchParams.get("sortBy") || "students",
   );
 
@@ -50,7 +51,12 @@ export default function SchoolList() {
     <>
       <SelectSort totalData={data?.pages[0].totalData!} />
       <ul className="grid min-h-[350px] min-w-[1050px] grid-cols-4 gap-[37px]">
-        {flatData?.map((sch) => <SchoolCard key={sch.id} sch={sch} />)}
+        {flatData?.map((sch) => (
+          <ListCard<SchoolCardType & { type: "school" }>
+            key={sch.id}
+            data={{ ...sch, type: "school" }}
+          />
+        ))}
       </ul>
       <div
         ref={observer}

@@ -1,0 +1,222 @@
+// 학교 정보 섹션
+.schoolInfoSection {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    border-radius: 40px;
+    margin-top: 39px;
+    border: 1px solid #222499;
+    background: #FBFBFF;
+
+    .schoolThumbnail {
+        width: 237px;
+        border-right: 1px solid #222499;
+        border-bottom: 1px solid #222499;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        overflow: hidden;
+
+        .schoolLogo {
+            width: inherit;
+            height: 206px;
+            border-bottom: 1px solid #222499;
+            border-right: 1px solid #222499;
+            border-top-right-radius: 40px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .schoolName {
+            width: 80%;
+            font-size: 23px;
+            font-weight: 600;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        span {
+            word-break: break-all;
+        }
+    }
+
+    .schoolInfo {
+        flex: 1;
+        padding: 28px 0 28px 30px;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: 400;
+        justify-content: space-around;
+
+        >div {
+            flex-shrink: 1;
+        }
+
+        .infoTag {
+            color: #222499;
+        }
+
+        a {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+    }
+}
+
+// ai 리뷰 섹션
+.AIReviewSection {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 48px;
+
+    .AIReviewBoxWrapper {
+        flex-shrink: 1;
+        max-width: 908px;
+        margin-top: 42px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url("/SCHOOL_REVIEW_ICON.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            max-width: 200px;
+            width: calc(200px + (100vw - 1280px) * 0.1);
+            aspect-ratio: 1/1;
+            left: -20vw;
+            top: 100px;
+        }
+
+
+        @media (max-width: 1150px) {
+            &::before {
+                display: none;
+            }
+        }
+
+
+        .reviewBox {
+            box-shadow: 0px 0px 8px 2px #22249926;
+            font-size: 20px;
+            border-radius: 10px;
+            padding-top: 21px;
+            padding-bottom: 2px;
+            position: relative;
+            background-color: #fff;
+
+            &::before {
+                content: "";
+                background-image: url("/AI_REVIEW_LEFT_CIRCLE.png");
+                background-size: contain;
+                width: 100px;
+                aspect-ratio: 87.93/82.84;
+                position: absolute;
+                top: -30px;
+                left: -130px;
+                z-index: -1;
+            }
+
+            &::after {
+                content: "";
+                background-image: url("/AI_REVIEW_RIGHT_CIRCLE.png");
+                background-size: contain;
+                width: 100px;
+                aspect-ratio: 87.93/82.84;
+                position: absolute;
+                bottom: -34px;
+                right: -60px;
+                z-index: -1;
+            }
+
+            li {
+                list-style: initial;
+                margin-left: 40px;
+                margin-bottom: 13px;
+                margin-right: 10px;
+            }
+        }
+
+        .moreBtn {
+            position: absolute;
+            width: 26px;
+            height: 13px;
+            bottom: 17px;
+            right: 24px;
+            z-index: 2;
+        }
+
+        .moreBtn.fold {
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+// 모든 후기 섹션
+.allReviewSection {
+
+    .reviewBoxWrapper {
+        box-shadow: 0px 0px 8px 2px #22249926;
+        background-color: #fff;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        min-height: 500px;
+        padding-top: 18px;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 145px;
+            aspect-ratio: 139.12/131.06;
+            position: absolute;
+            background-image: url("/All_REVIEW_LEFT_CIRCLE.svg");
+            top: -60px;
+            left: -70px;
+            z-index: -1;
+        }
+
+        &:after {
+            content: "";
+            width: 145px;
+            aspect-ratio: 139.12/131.06;
+            position: absolute;
+            background-image: url("/All_REVIEW_RIGHT_CIRCLE.svg");
+            bottom: -18px;
+            right: -80px;
+            z-index: -1;
+        }
+
+        .totalRate {
+            font-size: 22px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #DEDFFF;
+            padding: 0 20px;
+            padding-bottom: 15px;
+            font-weight: 500;
+            margin-bottom: 45px;
+        }
+
+        li {
+            padding: 17px 20px 17px 20px;
+            border-bottom: 1px solid #DEDFFF;
+            font-size: 18px;
+
+            .date {
+                padding-left: 3px;
+                color: #707070;
+            }
+
+            >p {
+                padding-left: 3px;
+            }
+        }
+    }
+}
