@@ -8,11 +8,27 @@ export type SchoolCardType = {
   img: string;
 };
 
-//학교 상세 정보 페이지의 학교 타입
 export type SchoolInfoType = {
-  location: string;
-  homepageUrl: string;
-  tel: string;
-  students: number;
-  dormitory: number;
+  info: {
+    meta_data: {
+      location: string;
+      students: number;
+      homepage: string;
+      number: string;
+      dormitory: number;
+    };
+    img_info: string;
+    ai_review: {
+      before_departure: string;
+      class: string;
+      life: string;
+      review: string;
+    };
+    all_review: {
+      before_departure: string;
+      class: string;
+      life: string;
+      review: string;
+    }[];
+  };
 };

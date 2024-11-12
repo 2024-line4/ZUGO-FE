@@ -1,11 +1,11 @@
-import { SchoolType } from "@/types/SchoolType";
+import { SchoolCardType } from "@/types/SchoolType";
 
 export default function defineSort(
-  data: SchoolType[],
+  data: SchoolCardType[],
   sortBy: string,
-): SchoolType[] {
+): SchoolCardType[] {
   if (sortBy === "alphabet") {
-    return data.sort((a, b) => a?.schoolName.localeCompare(b?.schoolName));
+    return data.sort((a, b) => a?.name.localeCompare(b?.name));
   } else {
     return data.sort((a, b) => b.students - a.students);
   }
