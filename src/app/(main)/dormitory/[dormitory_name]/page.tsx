@@ -1,4 +1,5 @@
 import MetaData from "../../_components/metaData";
+import LocationInfo from "../_components/LocationInfo";
 
 type Props = {
   params: Promise<{
@@ -40,6 +41,7 @@ export default async function page({ params }: Props) {
         data={testData.info}
         id={dormitory_name}
       />
+      <LocationInfo />
     </>
   );
 }

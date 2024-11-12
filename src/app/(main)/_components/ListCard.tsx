@@ -3,16 +3,23 @@ import { SchoolCardType } from "@/types/SchoolType";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-type DefineType<T> = T extends "school"
-  ? SchoolCardType & { type: "school" }
-  : DormitoryCardType & { type: "dormitory" };
+function DefineType(
+  data: DormitoryCardType | SchoolCardType,
+  type: string,
+): data is DormitoryCardType {
+  return type === "school";
+}
 
-export default function ListCard<T>({ data }: { data: DefineType<T> }) {
+type Props = {
+  data: DormitoryCardType | SchoolCardType;
+};
+
+export default function ListCard({ data }: Props) {
   const currentUrl = usePathname();
 
   return (
     <li className="flex h-fit min-w-[259px] cursor-pointer flex-col overflow-hidden rounded-[40px] bg-footerBg px-[4px] pt-[4px]">
-      {currentUrl === "/school" && data.type === "school" && (
+      {currentUrl === "/school" && DefineType(data, "school") ? (
         <Link href={`/school/${data.id}`}>
           <div className="h-[68.2%] w-full rounded-t-[40px] bg-white">
             <img
@@ -26,8 +33,7 @@ export default function ListCard<T>({ data }: { data: DefineType<T> }) {
             <span>{data.name}</span>
           </div>
         </Link>
-      )}
-      {currentUrl === "/dormitory" && data.type === "dormitory" && (
+      ) : (
         <Link href={`/dormitory/${data.id}`}>
           <div className="h-[68.2%] w-full rounded-t-[40px] bg-white">
             <img

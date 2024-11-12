@@ -32,7 +32,9 @@ export default function MetaData({ importedFrom, data, id }: Props) {
         </div>
         <div className={style.name}>
           {isDormitoryInfo(importedFrom, data) ? (
-            <h2 className="text-[#222499]">ddd</h2>
+            <h2 className="w-[80%] break-words text-center text-[#222499]">
+              {id}
+            </h2>
           ) : (
             <>
               <span className="mr-[10px] text-[#222499]">미국</span>
@@ -44,7 +46,22 @@ export default function MetaData({ importedFrom, data, id }: Props) {
       {
         <div className={style.info}>
           {isDormitoryInfo(importedFrom, data) ? (
-            <></>
+            <>
+              <div>
+                <span className={style.infoTag}>위치: </span>
+                {data.meta_data.location}
+              </div>
+
+              <div>
+                <span className={style.infoTag}>홈페이지: </span>
+                {data.meta_data.homepage}
+              </div>
+
+              <div>
+                <span className={style.infoTag}>위치: </span>
+                {data.meta_data.dorm_students}
+              </div>
+            </>
           ) : (
             <>
               <div>
@@ -57,11 +74,6 @@ export default function MetaData({ importedFrom, data, id }: Props) {
                 <Link href={data.info.meta_data.homepage}>
                   {data.info.meta_data.homepage}
                 </Link>
-              </div>
-
-              <div>
-                <span className={style.infoTag}>전화: </span>
-                {data.info.meta_data.number}
               </div>
 
               <div>

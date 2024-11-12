@@ -14,7 +14,6 @@ export type SchoolInfoType = {
       location: string;
       students: number;
       homepage: string;
-      number: string;
       dormitory: number;
     };
     img_info: string;

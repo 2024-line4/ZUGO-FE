@@ -51,12 +51,7 @@ export default function SchoolList() {
     <>
       <SelectSort totalData={data?.pages[0].totalData!} />
       <ul className="grid min-h-[350px] min-w-[1050px] grid-cols-4 gap-[37px]">
-        {flatData?.map((sch) => (
-          <ListCard<SchoolCardType & { type: "school" }>
-            key={sch.id}
-            data={{ ...sch, type: "school" }}
-          />
-        ))}
+        {flatData?.map((sch) => <ListCard key={sch.id} data={sch} />)}
       </ul>
       <div
         ref={observer}
