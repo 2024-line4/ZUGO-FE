@@ -54,12 +54,14 @@ export default function MetaData({ importedFrom, data, id }: Props) {
 
               <div>
                 <span className={style.infoTag}>홈페이지: </span>
-                {data.meta_data.homepage}
+                <Link href={data.meta_data.homepage}>
+                  {data.meta_data.homepage}
+                </Link>
               </div>
 
               <div>
-                <span className={style.infoTag}>위치: </span>
-                {data.meta_data.dorm_students}
+                <span className={style.infoTag}>학생수: </span>
+                {data.meta_data.dorm_students}명
               </div>
             </>
           ) : (
@@ -78,7 +80,7 @@ export default function MetaData({ importedFrom, data, id }: Props) {
 
               <div>
                 <span className={style.infoTag}>학생수: </span>
-                {data.info.meta_data.students}
+                {data.info.meta_data.students}명
               </div>
 
               <div>

@@ -16,7 +16,7 @@ app.use(
 );
 
 app.get("/univ/list", getSchool);
-app.get("/dormitory/list", getDormitory);
+app.get("/dorm/list", getDormitory);
 
 app.listen(process.env.PORT, () => {
   console.log(`server is on ${process.env.PORT}`);

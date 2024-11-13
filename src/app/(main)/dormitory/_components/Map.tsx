@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
 import style from "../[dormitory_name]/dormitoryName.module.scss";
-import { getGeoCode } from "../../school/_lib/GeoCode";
+import { getGeoCode } from "../_lib/GeoCode";
 
 type Props = {
   address: string;
@@ -21,9 +21,11 @@ export default function Map({ address }: Props) {
 
       const { Map } = await loader.importLibrary("maps");
 
-      // `await`을 추가하여 실제 값을 가져옵니다.
       const geoData = await getGeoCode(address);
-      const location = geoData.results[0].geometry.location; // 이제 정상적으로 접근 가능
+      const location = geoData.results[0]?.geometry.location || {
+        lat: 37.5503,
+        lng: 126.9971,
+      };
 
       const options: google.maps.MapOptions = {
         center: location,

@@ -23,8 +23,8 @@ export default function ListCard({ data }: Props) {
         <Link href={`/school/${data.id}`}>
           <div className="h-[68.2%] w-full rounded-t-[40px] bg-white">
             <img
-              className="h-full w-full object-contain"
-              src="https://i.namu.wiki/i/ke8viQ8dH00ZMC_ll0bemM_ujABpaN7GAs5WSE6VojD9JOwZ_viMt8ytqLNBy8dvJTeAHBTS4rrRR7TOPrNrDA.webp"
+              className="h-full max-h-[300px] w-full object-contain"
+              src={data.img}
               alt={`${data.name}.img`}
             />
           </div>
@@ -37,8 +37,8 @@ export default function ListCard({ data }: Props) {
         <Link href={`/dormitory/${data.id}`}>
           <div className="h-[68.2%] w-full rounded-t-[40px] bg-white">
             <img
-              className="h-full w-full object-contain"
-              src="https://i.namu.wiki/i/ke8viQ8dH00ZMC_ll0bemM_ujABpaN7GAs5WSE6VojD9JOwZ_viMt8ytqLNBy8dvJTeAHBTS4rrRR7TOPrNrDA.webp"
+              className="h-full max-h-[300px] w-full object-contain"
+              src={data.img}
               alt={`${data.name}.img`}
             />
           </div>

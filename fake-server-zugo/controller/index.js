@@ -6,11 +6,11 @@ const getSchool = (req, res) => {
 
   try {
     if (country !== "") {
-      schools = school.filter((sch) => sch.country === country);
+      schools = schools.filter((sch) => sch.country === country);
     }
 
     if (region !== "") {
-      schools = school.filter((sch) => sch.region === region);
+      schools = schools.filter((sch) => sch.region === region);
     }
 
     const totalData = schools.length;

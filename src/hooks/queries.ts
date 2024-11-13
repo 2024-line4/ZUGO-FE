@@ -60,7 +60,7 @@ export function useGetDormitory({ country, region }: GetDataProps) {
       pageParam: number;
     }): GetDormitoryResponseType => {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/dormitory/list?country=${country}&region=${region}&page=${pageParam}`,
+        `${process.env.NEXT_PUBLIC_BASE_URL}/dorm/list?country=${country}&region=${region}&page=${pageParam}`,
       );
 
       if (!response.ok) {

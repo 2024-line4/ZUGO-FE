@@ -12,10 +12,12 @@ export type DormitoryInfoType = {
     dorm_students: string;
     homepage: string;
   };
+
   img_info: {
     logo_img_Url: string;
     map_img_url: string;
   };
+
   review: {
     application: string;
     room: string;

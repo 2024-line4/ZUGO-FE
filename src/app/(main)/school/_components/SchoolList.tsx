@@ -6,8 +6,9 @@ import { useCallback, useRef } from "react";
 import { SyncLoader } from "react-spinners";
 import defineSort from "../_lib/defineSort";
 import SelectSort from "../../_components/(searchAndFilter)/SelectSort";
-import { SchoolCardType } from "@/types/SchoolType";
-import ListCard from "../../_components/ListCard";
+import ListCard from "../../_components/(ListUp)/ListCard";
+import NoData from "../../_components/(ListUp)/NoData";
+import Loading from "../../_components/Loading";
 
 export default function SchoolList() {
   const searchParams = useSearchParams();
@@ -15,11 +16,17 @@ export default function SchoolList() {
   const region: string = searchParams.get("region") || "";
   const loader = useRef<IntersectionObserver | null>(null);
 
-  const { data, isFetching, hasNextPage, fetchNextPage, isFetchingNextPage } =
-    useGetSchool({
-      country,
-      region,
-    });
+  const {
+    data,
+    isFetching,
+    hasNextPage,
+    fetchNextPage,
+    isFetchingNextPage,
+    isLoading,
+  } = useGetSchool({
+    country,
+    region,
+  });
 
   const flatData = defineSort(
     data?.pages.flatMap((page) => page.schools) || [],
@@ -47,29 +54,39 @@ export default function SchoolList() {
     [isFetching, isFetchingNextPage, fetchNextPage, hasNextPage],
   );
 
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <>
       <SelectSort totalData={data?.pages[0].totalData!} />
-      <ul className="grid min-h-[350px] min-w-[1050px] grid-cols-4 gap-[37px]">
-        {flatData?.map((sch) => <ListCard key={sch.id} data={sch} />)}
-      </ul>
-      <div
-        ref={observer}
-        className="my-3 flex min-w-[1080px] items-center justify-center text-2xl"
-      >
-        {isFetchingNextPage ? (
-          <></>
-        ) : (
-          hasNextPage && (
-            <SyncLoader
-              color="#36377d"
-              size={10}
-              loading
-              speedMultiplier={0.8}
-            />
-          )
-        )}
-      </div>
+      {flatData.length > 0 ? (
+        <>
+          <ul className="grid min-h-[350px] min-w-[1050px] grid-cols-4 gap-[37px]">
+            {flatData?.map((sch) => <ListCard key={sch.id} data={sch} />)}
+          </ul>
+          <div
+            ref={observer}
+            className="my-3 flex min-w-[1080px] items-center justify-center text-2xl"
+          >
+            {isFetchingNextPage ? (
+              <></>
+            ) : (
+              hasNextPage && (
+                <SyncLoader
+                  color="#36377d"
+                  size={10}
+                  loading
+                  speedMultiplier={0.8}
+                />
+              )
+            )}
+          </div>
+        </>
+      ) : (
+        <NoData />
+      )}
     </>
   );
 }
