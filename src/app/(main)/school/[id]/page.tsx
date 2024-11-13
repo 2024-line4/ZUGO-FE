@@ -1,5 +1,3 @@
-import style from "./schoolInfo.module.scss";
-import Link from "next/link";
 import AIReviewSection from "../_components/AIReviewSection";
 import AllReviewSection from "../_components/AllReviewSection";
 import { SchoolInfoType } from "@/types/SchoolType";
@@ -25,7 +23,6 @@ const fakeData: SchoolInfoType = {
       location: "미국",
       students: 22000,
       homepage: "https://www.yale.edu/",
-      number: "+1 203-432-4771",
       dormitory: 14,
     },
     img_info:

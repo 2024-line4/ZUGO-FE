@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import MetaData from "../../_components/metaData";
 import LocationInfo from "../_components/LocationInfo";
 
@@ -6,6 +7,12 @@ type Props = {
     dormitory_name: string;
   }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return {
+    title: (await params).dormitory_name,
+  };
+}
 
 const testData = {
   info: {
