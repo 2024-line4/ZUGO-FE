@@ -44,7 +44,7 @@ export default function SelectSort({ totalData = 0 }: { totalData: number }) {
                 className="text-[20px] hover:bg-slate-100"
                 value="alphabet"
               >
-                가나다 순
+                알파벳 순
               </SelectItem>
             </SelectGroup>
           </SelectContent>

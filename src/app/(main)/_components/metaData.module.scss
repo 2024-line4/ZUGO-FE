@@ -1,0 +1,61 @@
+.metaDataWrapper {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    border-radius: 40px;
+    margin-top: 39px;
+    border: 1px solid #222499;
+    background: #FBFBFF;
+
+    .thumbnail {
+        width: 237px;
+        border-right: 1px solid #222499;
+        border-bottom: 1px solid #222499;
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+        overflow: hidden;
+    }
+
+    .logoImgWrapper {
+        width: inherit;
+        height: 206px;
+        border-bottom: 1px solid #222499;
+        border-right: 1px solid #222499;
+        border-top-right-radius: 40px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .name {
+        width: 80%;
+        font-size: 23px;
+        font-weight: 600;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    span {
+        word-break: break-all;
+    }
+
+    .info {
+        flex: 1;
+        padding: 28px 0 28px 30px;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: 400;
+        justify-content: space-around;
+
+        .infoTag {
+            color: #222499;
+        }
+    }
+}

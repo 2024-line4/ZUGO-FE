@@ -1,7 +1,7 @@
-import style from "./schoolInfo.module.scss";
-import Link from "next/link";
 import AIReviewSection from "../_components/AIReviewSection";
 import AllReviewSection from "../_components/AllReviewSection";
+import { SchoolInfoType } from "@/types/SchoolType";
+import MetaData from "../../_components/metaData";
 
 type Props = {
   params: Promise<{
@@ -16,6 +16,45 @@ export async function generateMetadata({ params }: Props) {
     description: `${id}학교의 정보 및 교환학생 리뷰`,
   };
 }
+
+const fakeData: SchoolInfoType = {
+  info: {
+    meta_data: {
+      location: "미국",
+      students: 22000,
+      homepage: "https://www.yale.edu/",
+      dormitory: 14,
+    },
+    img_info:
+      "https://i.namu.wiki/i/HdLwzeidQ84nWhzT6smkXCWiek2CWkbpAOZvJcy0Q7NcpvzVYlPhiEGdnIx21wgAeLkZ9yPJXuTfUfPbclg6fw.webp",
+    ai_review: {
+      before_departure: "준비사항",
+      class: "도착 및 수업",
+      life: "학교 생활",
+      review: "총평",
+    },
+    all_review: [
+      {
+        before_departure: "준비사항",
+        class: "도착 및 수업",
+        life: "학교 생활",
+        review: "총평",
+      },
+      {
+        before_departure: "준비사항",
+        class: "도착 및 수업",
+        life: "학교 생활",
+        review: "총평",
+      },
+      {
+        before_departure: "준비사항",
+        class: "도착 및 수업",
+        life: "학교 생활",
+        review: "총평",
+      },
+    ],
+  },
+};
 
 const text = [
   "예일대의 고풍스러운 건물과 뉴헤이븐의 독특한 분위기 덕분에 교환학생들에게 색다른 학습 환경을 제공합니다. 도서관이 특히 유명하며, 학생들이 공부에 몰입할 수 있는 분위기를 조성합니다.",
@@ -80,46 +119,7 @@ export default async function SchoolInfo({ params }: Props) {
   // 이후에 이 id를 가지고 fetch 해야함
   return (
     <>
-      <section className={style.schoolInfoSection}>
-        <div className={style.schoolThumbnail}>
-          <div className={style.schoolLogo}>
-            <img
-              src="https://i.namu.wiki/i/HdLwzeidQ84nWhzT6smkXCWiek2CWkbpAOZvJcy0Q7NcpvzVYlPhiEGdnIx21wgAeLkZ9yPJXuTfUfPbclg6fw.webp"
-              alt={`${id}-logo.png`}
-            />
-          </div>
-          <div className={style.schoolName}>
-            <span className="mr-[10px] text-[#222499]">미국</span>
-            <span className="text-[#4E4E4E]">{id}</span>
-          </div>
-        </div>
-
-        <div className={style.schoolInfo}>
-          <div>
-            <span className={style.infoTag}>위치: </span>
-            미국 코네티컷주 뉴헤이븐
-          </div>
-
-          <div>
-            <span className={style.infoTag}>홈페이지: </span>
-            <Link href={"https://www.yale.edu/"}>https://www.yale.edu/</Link>
-          </div>
-
-          <div>
-            <span className={style.infoTag}>전화: </span>
-            +1 203-432-4771
-          </div>
-
-          <div>
-            <span className={style.infoTag}>학생수: </span>
-            11,904명 (2023년 기준) (학부 6,590명, 대학원 5,314명)
-          </div>
-
-          <div>
-            <span className={style.infoTag}>기숙사: </span>총 14개
-          </div>
-        </div>
-      </section>
+      <MetaData importedFrom="school" data={fakeData} id={id} />
       <AIReviewSection reviews={text} />
       <AllReviewSection allReviews={allReviews} />
     </>

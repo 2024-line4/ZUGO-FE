@@ -1,16 +1,29 @@
+import { Metadata } from "next";
+import MetaData from "../../_components/metaData";
+import LocationInfo from "../_components/LocationInfo";
+import getDormitoryInfo from "../_lib/getDormitoryInfo";
+
 type Props = {
   params: Promise<{
     dormitory_name: string;
   }>;
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return {
+    title: (await params).dormitory_name,
+  };
+}
+
 export default async function page({ params }: Props) {
   const { dormitory_name } = await params;
-  // 이후에 이 이름 가지고 fetch해오기
+  const { info } = await getDormitoryInfo(dormitory_name);
+  console.log(info);
 
   return (
     <>
-      <section></section>
+      <MetaData importedFrom="dormitory" data={info} id={dormitory_name} />
+      <LocationInfo id={dormitory_name} />
     </>
   );
 }
