@@ -75,3 +75,8 @@ export const regionCode: Record<string, string> = {
   밀라노: "MILAN",
   피렌체: "FLORENCE",
 };
+
+export const majorCode: Record<string, string> = {
+  경영학과 : "BUSINESSADMINISTRATION",
+  경제학과 : "ECONOMICS",  
+}
