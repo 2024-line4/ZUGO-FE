@@ -29,11 +29,21 @@ export default function Map({ address }: Props) {
 
       const options: google.maps.MapOptions = {
         center: location,
-        zoom: 18,
+        zoom: 15,
         mapId: "NEXT_MAPS_TUTS",
       };
 
+      const { AdvancedMarkerElement } = (await google.maps.importLibrary(
+        "marker",
+      )) as any;
+
       const map = new Map(mapRef.current as HTMLDivElement, options);
+
+      new window.google.maps.marker.AdvancedMarkerElement({
+        position: location,
+        map: map,
+        title: "Your Location",
+      });
     }
 
     initMap();

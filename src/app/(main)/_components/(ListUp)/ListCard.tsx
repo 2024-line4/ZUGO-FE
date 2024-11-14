@@ -1,5 +1,5 @@
 import { DormitoryCardType } from "@/types/DormitoryType";
-import { SchoolCardType } from "@/types/SchoolType";
+import { SchoolCardType } from "@/types/schoolType";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -21,7 +21,7 @@ export default function ListCard({ data }: Props) {
     <li className="flex h-fit min-w-[259px] cursor-pointer flex-col overflow-hidden rounded-[40px] bg-footerBg px-[4px] pt-[4px]">
       {currentUrl === "/school" && DefineType(data, "school") ? (
         <Link href={`/school/${data.id}`}>
-          <div className="h-[68.2%] w-full rounded-t-[40px] bg-white">
+          <div className="h-[68.2%] w-full overflow-hidden rounded-t-[40px] bg-white">
             <img
               className="h-full max-h-[300px] w-full object-contain"
               src={data.img}
@@ -35,7 +35,7 @@ export default function ListCard({ data }: Props) {
         </Link>
       ) : (
         <Link href={`/dormitory/${data.id}`}>
-          <div className="h-[68.2%] w-full rounded-t-[40px] bg-white">
+          <div className="h-[68.2%] w-full overflow-hidden rounded-t-[40px] bg-white">
             <img
               className="h-full max-h-[300px] w-full object-contain"
               src={data.img}

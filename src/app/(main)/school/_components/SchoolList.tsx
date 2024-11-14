@@ -28,6 +28,8 @@ export default function SchoolList() {
     region,
   });
 
+  console.log(data?.pages);
+
   const flatData = defineSort(
     data?.pages.flatMap((page) => page.schools) || [],
     searchParams.get("sortBy") || "students",

@@ -1,5 +1,5 @@
 import { DormitoryCardType } from "@/types/DormitoryType";
-import { SchoolCardType } from "@/types/SchoolType";
+import { SchoolCardType } from "@/types/schoolType";
 import { useInfiniteQuery } from "@tanstack/react-query";
 
 type GetDataProps = {
