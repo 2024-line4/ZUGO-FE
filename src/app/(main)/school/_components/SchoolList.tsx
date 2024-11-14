@@ -2,13 +2,14 @@
 
 import { useGetSchool } from "@/hooks/queries";
 import { useSearchParams } from "next/navigation";
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { SyncLoader } from "react-spinners";
 import defineSort from "../_lib/defineSort";
 import SelectSort from "../../_components/(searchAndFilter)/SelectSort";
 import ListCard from "../../_components/(ListUp)/ListCard";
 import NoData from "../../_components/(ListUp)/NoData";
 import Loading from "../../_components/Loading";
+import { SchoolCardType } from "@/types/schoolType";
 
 export default function SchoolList() {
   const searchParams = useSearchParams();
@@ -28,12 +29,15 @@ export default function SchoolList() {
     region,
   });
 
-  console.log(data?.pages);
-
-  const flatData = defineSort(
-    data?.pages.flatMap((page) => page.schools) || [],
-    searchParams.get("sortBy") || "students",
-  );
+  const [flatData, setFlatData] = useState<SchoolCardType[] | []>([]);
+  useEffect(() => {
+    setFlatData(
+      defineSort(
+        data?.pages.flatMap((page) => page.schools) || [],
+        searchParams.get("sortBy") || "students",
+      ),
+    );
+  }, [data, searchParams]);
 
   const loadNextPageWithDelay = useCallback(() => {
     setTimeout(() => {

@@ -88,7 +88,13 @@ export default function SearchAndFilter() {
           placeholder="자세한 내용을 입력하세요."
           className={style.input}
         />
-        <Image src={searchIcon} alt="search.svg" />
+        <Image
+          src={searchIcon}
+          alt="search.svg"
+          onClick={() => {
+            router.push("/school/search");
+          }}
+        />
       </div>
       <ul className={style.filter}>
         <li>
