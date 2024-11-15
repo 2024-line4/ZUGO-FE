@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select";
 import { countries, countryCodes, regionCode } from "@/lib/mappingCode";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 export default function SearchAndFilter() {
   const searchParams = useSearchParams();
@@ -30,6 +30,9 @@ export default function SearchAndFilter() {
   const [regionParam, setRegionParam] = useState<string>(
     searchParams.get("region") || "",
   );
+
+  const [searchKeyword, setSearchKeyword] = useState<string>("");
+
   const router = useRouter();
 
   // filter를 설정하는 함수: 위 useState 값을 설정한다
@@ -87,12 +90,21 @@ export default function SearchAndFilter() {
           type="text"
           placeholder="자세한 내용을 입력하세요."
           className={style.input}
+          value={searchKeyword}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            setSearchKeyword(e.target.value)
+          }
         />
         <Image
           src={searchIcon}
           alt="search.svg"
           onClick={() => {
-            router.push("/school/search");
+            if (searchKeyword === "") return;
+            router.push(
+              currentUrl === "/school"
+                ? `/school/search?query=${searchKeyword}`
+                : `/dormitory/search?query=${searchKeyword}"`,
+            );
           }}
         />
       </div>

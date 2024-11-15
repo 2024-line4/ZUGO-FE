@@ -1,0 +1,44 @@
+.modalBg {
+    background-color: rgba(0, 0, 0, .4);
+    width: 100dvw;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal {
+        background-color: #fff;
+        border-radius: 10px;
+        width: 70%;
+        height: 90%;
+        overflow-y: auto;
+        position: relative;
+        padding: 55px 13px 15px 15px;
+
+        .closeBtn {
+            position: absolute;
+            top: 15px;
+            left: 10px;
+        }
+
+        .listWrapper {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            row-gap: 12px;
+            column-gap: 8px;
+        }
+
+        .noData {
+            display: flex;
+            width: 100%;
+            height: calc(100% - 50px);
+            font-size: 40px;
+            justify-content: center;
+            align-items: center;
+            color: #707070;
+        }
+    }
+}
