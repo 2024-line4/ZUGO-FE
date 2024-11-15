@@ -437,373 +437,426 @@ module.exports = {
     {
       id: "DUBLIN_UNIV_DORMITORY_1",
       name: "더블린 대학교 1기숙사",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "IE",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DUBLIN",
     },
     {
       id: "SEOUL_UNIV_DORMITORY_1",
       name: "서울대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "SEOUL",
     },
     {
       id: "BUSAN_UNIV_DORMITORY_1",
       name: "부산대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "BUSAN",
     },
     {
       id: "HARVARD_UNIV_DORMITORY_1",
       name: "하버드 대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "US",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "BOSTON",
     },
     {
       id: "UCLA_UNIV_DORMITORY_1",
       name: "캘리포니아 대학교 로스앤젤레스 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "US",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "LOSANGELES",
     },
     {
       id: "CHICAGO_UNIV_DORMITORY_1",
       name: "시카고 대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "US",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "CHICAGO",
     },
     {
       id: "NYU_UNIV_DORMITORY_1",
       name: "뉴욕 대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "US",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "NEWYORK",
     },
     {
       id: "TORONTO_UNIV_DORMITORY_1",
       name: "토론토 대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "CA",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "TORONTO",
     },
     {
       id: "UBC_UNIV_DORMITORY_1",
       name: "브리티시 컬럼비아 대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "CA",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "VANCOUVER",
     },
     {
       id: "MCGILL_UNIV_DORMITORY_1",
       name: "맥길 대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "CA",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "MONTREAL",
     },
     {
       id: "OXFORD_UNIV_DORMITORY_1",
       name: "옥스퍼드 대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "UK",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "LONDON",
     },
     {
       id: "CAMBRIDGE_UNIV_DORMITORY_1",
       name: "케임브리지 대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "UK",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "CAMBRIDGE",
     },
     {
       id: "STANFORD_UNIV_DORMITORY_1",
       name: "스탠포드 대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "US",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "PALOALTO",
     },
     {
       id: "MIT_UNIV_DORMITORY_1",
       name: "매사추세츠 공과대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "US",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "CAMBRIDGE",
     },
     {
       id: "YONSEI_UNIV_DORMITORY_1",
       name: "연세대학교 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "SEOUL",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
 
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
     {
       id: "KAIST_UNIV_DORMITORY_1",
       name: "KAIST 기숙사 1",
-      img: "https://i.namu.wiki/i/1IrHs2Eiuw-GBgI1a6OsLXdAsZezO5fqiHuwYW2Js4VUMkYmKyruixiv5FKj5izUy7kKawOe8jjqOqYmd_D7qA.svg",
       country: "KR",
+      img: "https://tostar-bucket.s3.ap-northeast-2.amazonaws.com/KakaoTalk_Photo_2024-09-14-12-53-16+012.jpeg",
+
       region: "DAEJEON",
     },
   ],

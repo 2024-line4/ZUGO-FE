@@ -32,3 +32,39 @@
         }
     }
 }
+
+.reviewSection {
+    box-shadow: 0px 0px 8px 2px #22249926;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 50px;
+
+    >h2 {
+        font-size: 22px;
+        font-weight: 600;
+        padding: 11px 20px 11px;
+        border-bottom: 1px solid #DEDFFF
+    }
+
+    .reviewBox {
+        padding: 20px;
+
+        .reviewCategory {
+            margin-bottom: 17px;
+            display: flex;
+
+            >h3 {
+                font-weight: 500;
+                font-size: 18px;
+                width: fit-content;
+                height: fit-content;
+                word-break: keep-all;
+            }
+
+            >p {
+                margin-left: 7px;
+                font-size: 18px;
+            }
+        }
+    }
+}

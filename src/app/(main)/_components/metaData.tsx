@@ -1,5 +1,5 @@
 import { DormitoryInfoType } from "@/types/DormitoryType";
-import { SchoolInfoType } from "@/types/SchoolType";
+import { SchoolInfoType } from "@/types/schoolType";
 import style from "./metaData.module.scss";
 import Link from "next/link";
 
@@ -81,11 +81,6 @@ export default function MetaData({ importedFrom, data, id }: Props) {
               <div>
                 <span className={style.infoTag}>학생수: </span>
                 {data.info.meta_data.students}명
-              </div>
-
-              <div>
-                <span className={style.infoTag}>기숙사: </span>총{" "}
-                {data.info.meta_data.dormitory}개
               </div>
             </>
           )}

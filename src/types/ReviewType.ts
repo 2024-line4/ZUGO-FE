@@ -7,3 +7,10 @@ export type ReviewType = {
   rate: number;
   review: string;
 };
+
+export type AIReviewType = {
+  before_departure: string;
+  class: string;
+  life: string;
+  review: string;
+};

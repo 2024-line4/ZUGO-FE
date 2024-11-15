@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import MetaData from "../../_components/metaData";
 import LocationInfo from "../_components/LocationInfo";
 import getDormitoryInfo from "../_lib/getDormitoryInfo";
+import DormitoryReview from "../_components/DormitoryReview";
 
 type Props = {
   params: Promise<{
@@ -24,6 +25,7 @@ export default async function page({ params }: Props) {
     <>
       <MetaData importedFrom="dormitory" data={info} id={dormitory_name} />
       <LocationInfo id={dormitory_name} />
+      <DormitoryReview review={info.review} />
     </>
   );
 }

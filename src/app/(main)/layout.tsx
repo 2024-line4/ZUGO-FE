@@ -6,16 +6,20 @@ import RQProvider from "./_components/RQProvider";
 
 type Props = {
   children: ReactNode;
+  modal: ReactNode;
 };
 
-export default function Layout({ children }: Readonly<Props>) {
+export default function Layout({ children, modal }: Readonly<Props>) {
   return (
     <RQProvider>
       <DefineBgImage>
-        <Nav />
-        <main className="mx-[60px]">{children}</main>
-        {/* <Footer /> */}
+        <div className="flex flex-col min-h-screen">
+          <Nav />
+          <main className="flex-grow mx-[60px]">{children}</main>
+          <Footer />
+        </div>
       </DefineBgImage>
+      {modal}
     </RQProvider>
   );
 }
