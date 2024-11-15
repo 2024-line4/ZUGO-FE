@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./mainPage.module.scss";
 import ZUGOLogo from "@/../public/main_logo.png";
 import AdImg from "@/../public/main_advertising_google.png";
@@ -8,7 +9,9 @@ import EmojiIcon from "@/../public/logo-icon.png";
 import YaleLogo from "@/../public/main_university.png";
 import Unviersity2Logo from "@/../public/main_university2.png";
 import Unviersity3Logo from "@/../public/main_university3.png";
-import PopularIcon from "@/../public/main_ic_btn1.svg";
+import Btn1 from "@/../public/main_btn1.svg";
+import Btn2 from "@/../public/main_btn2.svg";
+import Btn3 from "@/../public/main_btn3.svg";
 
 const universities = [
   { name: "Yale University", image: YaleLogo },
@@ -43,7 +46,7 @@ export default function page() {
               <p className="text-[40px] font-semibold mt-2" style={{ color: "#000260" }}>
                 내게 맞는 학교를 고르는
               </p>
-              <p className="text-[40px] font-bold" style={{ color: "#000260"}}>
+              <p className="text-[40px] font-bold" style={{ color: "#000260" }}>
                 "가장 확실한 방법"
               </p>
             </div>
@@ -86,22 +89,26 @@ export default function page() {
 
       {/* Button Links */}
       <section className={`mt-12 ${styles.buttonLinks}`}>
-        <button className={styles.customButton}>
-          <Image src={PopularIcon} alt="Icon" width={20} height={20} />
-          인기 순위가 궁금하다면?
-        </button>
-        <button className={styles.customButton}>
-          <Image src={PopularIcon} alt="Icon" width={20} height={20} />
-          학교 정보가 궁금하다면?
-        </button>
-        <button className={styles.customButton}>
-          <Image src={PopularIcon} alt="Icon" width={20} height={20} />
-          다른 사람들의 선택이 궁금하다면?
-        </button>
+        <Link href="/recommend" passHref>
+          <button className={styles.customButton}>
+            <Image src={Btn1} alt="Icon" />
+          </button>
+        </Link>
+        <Link href="/school" passHref>
+          <button className={styles.customButton}>
+            <Image src={Btn2} alt="Icon" />
+          </button>
+        </Link>
+        <Link href="/school" passHref>
+          <button className={styles.customButton}>
+            <Image src={Btn3} alt="Icon" />
+          </button>
+        </Link>
       </section>
 
+
       {/* Ad Section */}
-      <section className={`mt-12 ${styles.adSection} mx-auto`} style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)'}}>
+      <section className={`mt-12 ${styles.adSection} mx-auto`} style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
         <div className="flex items-center justify-center w-full">
           <Image src={AdImg} alt="Google AdSense" width={200} height={100} />
           <p className="text-sm text-gray-500 ml-4">구글 애드센스 광고</p>
