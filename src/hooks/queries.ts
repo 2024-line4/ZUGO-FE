@@ -1,6 +1,6 @@
 import { DormitoryCardType } from "@/types/DormitoryType";
-import { SchoolCardType } from "@/types/SchoolType";
-import { useInfiniteQuery } from "@tanstack/react-query";
+import { SchoolCardType } from "@/types/schoolType";
+import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 
 type GetDataProps = {
   country: string;
@@ -78,6 +78,44 @@ export function useGetDormitory({ country, region }: GetDataProps) {
       }
 
       return lastPageParam + 1;
+    },
+  });
+}
+
+// 학교 이름으로 검색하는 쿼리문
+
+export function useGetSchoolSearch(query: string) {
+  return useQuery({
+    queryKey: ["school search results", query],
+    queryFn: async () => {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/univ/url?query=${query}`,
+      );
+
+      if (!res.ok) {
+        throw new Error("HTTP ERROR");
+      }
+
+      return res.json();
+    },
+  });
+}
+
+// 기숙사 이름으로 검색하는 쿼리문
+
+export function useGetDormitorySearch(query: string) {
+  return useQuery({
+    queryKey: ["dormitory search results", query],
+    queryFn: async () => {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BASE_URL}/dorm/url?query=${query}`,
+      );
+
+      if (!res.ok) {
+        throw new Error("HTTP ERROR");
+      }
+
+      return res.json();
     },
   });
 }

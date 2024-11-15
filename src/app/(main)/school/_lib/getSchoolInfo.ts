@@ -1,10 +1,10 @@
-export default async function getSchoolInfo({
-  schoolName,
-}: {
-  schoolName: string;
-}) {
+import { SchoolInfoType } from "@/types/schoolType";
+
+export default async function getSchoolInfo(
+  id: string,
+): Promise<SchoolInfoType> {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/UNIV=${schoolName}`,
+    `${process.env.NEXT_PUBLIC_BASE_URL}/univ?school=${id}`,
   );
 
   if (!res.ok) {

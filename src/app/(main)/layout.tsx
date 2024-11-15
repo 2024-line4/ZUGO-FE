@@ -6,9 +6,10 @@ import RQProvider from "./_components/RQProvider";
 
 type Props = {
   children: ReactNode;
+  modal: ReactNode;
 };
 
-export default function Layout({ children }: Readonly<Props>) {
+export default function Layout({ children, modal }: Readonly<Props>) {
   return (
     <RQProvider>
       <DefineBgImage>
@@ -16,6 +17,7 @@ export default function Layout({ children }: Readonly<Props>) {
         <main className="mx-[60px]">{children}</main>
         {/* <Footer /> */}
       </DefineBgImage>
+      {modal}
     </RQProvider>
   );
 }

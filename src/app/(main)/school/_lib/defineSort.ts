@@ -1,4 +1,4 @@
-import { SchoolCardType } from "@/types/SchoolType";
+import { SchoolCardType } from "@/types/schoolType";
 
 export default function defineSort(
   data: SchoolCardType[],

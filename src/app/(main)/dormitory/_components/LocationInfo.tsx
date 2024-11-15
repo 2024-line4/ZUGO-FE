@@ -8,7 +8,8 @@ type Props = {
 export default function LocationInfo({ id }: Props) {
   return (
     <section className={style.wrapper}>
-      <Map address={id} />
+      {/* 밑에 id로 넣기 */}
+      <Map address={"서울대학교"} />
       <div className={style.locationInfo}>
         <div className={style.mapInfo}>
           <h2>위치정보</h2>
