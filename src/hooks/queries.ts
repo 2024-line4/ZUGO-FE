@@ -1,6 +1,5 @@
 import { DormitoryCardType } from "@/types/DormitoryType";
-import { SchoolCardType } from "@/types/SchoolType";
-import { useInfiniteQuery } from "@tanstack/react-query";
+import { SchoolCardType } from "@/types/schoolType";
 import { RecommendCardType } from "@/types/RecommendType";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 
@@ -122,7 +121,7 @@ export function useGetRecommend({
         throw new Error("GET RECOMMEND ERROR");
       }
       const res = await Promise.all(
-        recommendlist.schools.map(async (el) => {
+        recommendlist.schools.map(async (el: SchoolCardType) => {
           const res = await fetch(
             `${process.env.NEXT_PUBLIC_BASE_URL}/univ?school=${el.id}`,
           );
@@ -133,7 +132,8 @@ export function useGetRecommend({
       );
       console.log(res);
 
-      return res;
+      return { schools: res }; 
+      
     },
     gcTime: 300 * 1000,
     staleTime: 60 * 1000,
@@ -142,6 +142,7 @@ export function useGetRecommend({
       console.log(lastPage, lastPageParam);
       return 1;
     }
+  });
 }
 
 // 학교 이름으로 검색하는 쿼리문
@@ -161,6 +162,7 @@ export function useGetSchoolSearch(query: string) {
       return res.json();
     },
   });
+  
 }
 
 // 기숙사 이름으로 검색하는 쿼리문
