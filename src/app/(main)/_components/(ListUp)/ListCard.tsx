@@ -17,9 +17,9 @@ type Props = {
 export default function ListCard({ data }: Props) {
   const currentUrl = usePathname();
   return (
-    <li className="flex h-fit min-w-[259px] cursor-pointer flex-col overflow-hidden rounded-[40px] bg-footerBg px-[4px] pt-[4px]">
+    <li className="flex h-full min-w-[259px] cursor-pointer flex-col overflow-hidden rounded-[40px] bg-footerBg px-[4px] pt-[4px]">
       {currentUrl === "/school" && DefineType(data, "school") ? (
-        <Link href={`/school/${data.id}`}>
+        <Link className="h-full" href={`/school/${data.name}`}>
           <div className="h-[68.2%] w-full overflow-hidden rounded-t-[40px] bg-white">
             <img
               className="h-full max-h-[300px] w-full object-contain"
@@ -33,7 +33,7 @@ export default function ListCard({ data }: Props) {
           </div>
         </Link>
       ) : (
-        <Link href={`/dormitory/${data.id}`}>
+        <Link href={`/dormitory/${data.name}`}>
           <div className="h-[68.2%] w-full overflow-hidden rounded-t-[40px] bg-white">
             <img
               className="h-full max-h-[300px] w-full object-contain"

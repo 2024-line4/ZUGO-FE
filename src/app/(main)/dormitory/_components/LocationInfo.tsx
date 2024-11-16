@@ -2,7 +2,7 @@
 
 import Map from "./Map";
 import style from "../[dormitory_name]/dormitoryName.module.scss";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 
 type Props = {
   id: string;
@@ -15,13 +15,16 @@ export default function LocationInfo({ id }: Props) {
     near: [],
   });
 
-  console.log(nearby.school);
+  // useEffect(() => {
+  //   //@ts-ignore
+  //   console.log(nearby.school?.places[0]);
+  // }, [nearby]);
 
   return (
     <section className={style.wrapper}>
       {/* 밑에 id로 넣기 */}
       <Map
-        address={"서울대학교"}
+        address={"HARVARD"}
         //@ts-ignore
         setNearby={setNearby}
         setFormmetedLocation={setFormattedLocation}
