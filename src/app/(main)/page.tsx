@@ -12,6 +12,10 @@ import Unviersity3Logo from "@/../public/main_university3.png";
 import Btn1 from "@/../public/main_btn1.svg";
 import Btn2 from "@/../public/main_btn2.svg";
 import Btn3 from "@/../public/main_btn3.svg";
+import Event3 from "@/../public/main_event3.png";
+import Event2 from "@/../public/main_event2.png";
+import Event1 from "@/../public/main_event1.png";
+
 
 const universities = [
   { name: "Yale University", image: YaleLogo },
@@ -74,18 +78,46 @@ export default function page() {
             </div>
           </div>
         </div>
+        
       </section>
+
 
       {/* Event Section */}
       <section className={`mt-16 ${styles.eventSection}`}>
         <h3 className="text-2xl font-semibold text-black">EVENT</h3>
         <div className="mt-4 grid grid-cols-3 gap-16">
-          <div className="bg-white p-4 shadow rounded-[20px] h-56 flex items-center justify-center border border-[#222499]">이벤트 1</div>
-          <div className="bg-white p-4 shadow rounded-[20px] h-56 flex items-center justify-center border border-[#222499]">이벤트 2</div>
-          <div className="bg-white p-4 shadow rounded-[20px] h-56 flex items-center justify-center border border-[#222499]">이벤트 3</div>
-          {/* <div className="bg-white p-4 shadow rounded-lg h-56 flex items-center justify-center">이벤트 3</div> */}
+          {/* 이벤트 1 */}
+          <div
+            className="bg-white p-4 shadow rounded-[20px] h-56 flex items-center justify-center border border-[#222499]"
+            style={{
+              backgroundImage: `url(${Event1.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
+
+          {/* 이벤트 2 */}
+          <div
+            className="bg-white p-4 shadow rounded-[20px] h-56 flex items-center justify-center border border-[#222499]"
+            style={{
+              backgroundImage: `url(${Event2.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
+
+          {/* 이벤트 3 */}
+          <div
+            className="bg-white p-4 shadow rounded-[20px] h-56 flex items-center justify-center border border-[#222499]"
+            style={{
+              backgroundImage: `url(${Event3.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
         </div>
       </section>
+
 
       {/* Button Links */}
       <section className={`mt-12 ${styles.buttonLinks}`}>
@@ -108,19 +140,52 @@ export default function page() {
 
 
       {/* Ad Section */}
-      <section className={`mt-12 ${styles.adSection} mx-auto`} style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}>
-        <div className="flex items-center justify-center w-full">
-          <Image src={AdImg} alt="Google AdSense" width={200} height={100} />
-          <p className="text-sm text-gray-500 ml-4">구글 애드센스 광고</p>
+      <section
+        className={`mt-12 ${styles.adSection} mx-auto`}
+        style={{ width: "100vw", marginLeft: "calc(-50vw + 50%)" }}
+      >
+        <div className="flex justify-between items-center mx-auto max-w-[1200px]">
+          {/* Buttons Section */}
+          <div className="grid grid-cols-2 gap-[30px]">
+            <button
+              className={styles.footerButton}
+              onClick={() => window.open("https://www.skyscanner.co.kr/", "_blank")}
+            >
+              항공권 사이트 바로가기
+            </button>
+            <button
+              className={styles.footerButton}
+              onClick={() => window.open("https://www.visa.go.kr/", "_blank")}
+            >
+              비자 사이트 바로가기
+            </button>
+            <button
+              className={styles.footerButton}
+              onClick={() => window.open("https://www.kises.co.kr/", "_blank")}
+            >
+              여행사 바로가기
+            </button>
+            <button
+              className={styles.footerButton}
+              onClick={() =>
+                window.open(
+                  "https://www.coei.com/index.php?utm_source=google_mo&utm_medium=cpc&utm_campaign=CSAF&utm_term=%EC%A2%85%EB%A1%9C%EC%9C%A0%ED%95%99%EC%9B%90&gad_source=1&gclid=Cj0KCQiA_9u5BhCUARIsABbMSPtv2aj-CndPnx5mVw0jpNwTPsPixNVI4o9jCdDX5I35pFfPe7H-tiwaAi9pEALw_wcB",
+                  "_blank"
+                )
+              }
+            >
+              유학원 바로가기
+            </button>
+          </div>
+
+          {/* Ad Section */}
+          <div className="flex flex-col items-center ml-12"> {/* 간격을 ml-6에서 ml-12로 변경 */}
+            <Image src={AdImg} alt="Google AdSense" width={200} height={100} />
+            <p className="text-sm text-gray-500 mt-4">구글 애드센스 광고</p>
+          </div>
         </div>
       </section>
 
-
-      {/* Footer Section */}
-      <section className={`mt-20 flex justify-center gap-[130px]`}>
-        <button className={styles.footerButton}>항공권 사이트 바로가기</button>
-        <button className={styles.footerButton}>비자 사이트 바로가기</button>
-      </section>
     </div>
   );
 }
