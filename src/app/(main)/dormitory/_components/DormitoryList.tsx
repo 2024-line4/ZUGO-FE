@@ -6,7 +6,8 @@ import SelectSort from "../../_components/(searchAndFilter)/SelectSort";
 import ListCard from "../../_components/(ListUp)/ListCard";
 import NoData from "../../_components/(ListUp)/NoData";
 import Loading from "../../_components/Loading";
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { DormitoryCardType } from "@/types/DormitoryType";
 
 export default function DormitoryList() {
   const searchParams = useSearchParams();
@@ -25,10 +26,16 @@ export default function DormitoryList() {
     country,
     region,
   });
-  const sortedData =
-    data?.pages
-      .flatMap((page) => page.dormitory)
-      .sort((a, b) => a.name.localeCompare(b.name)) || [];
+
+  const [sortedData, setSortedData] = useState<DormitoryCardType[] | []>([]);
+
+  useEffect(() => {
+    setSortedData(
+      data?.pages
+        .flatMap((page) => page.dormitory)
+        .sort((a, b) => a.name.localeCompare(b.name)) || [],
+    );
+  }, [data, searchParams]);
 
   const fetchWithDelay = useCallback(() => {
     setTimeout(() => {

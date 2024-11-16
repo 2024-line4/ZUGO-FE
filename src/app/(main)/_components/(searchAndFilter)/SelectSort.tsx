@@ -24,7 +24,7 @@ export default function SelectSort({ totalData = 0 }: { totalData: number }) {
   return (
     <div className="mb-[27px] mt-[18px] flex items-center text-[20px]">
       <span className="mr-[12px]">총 {totalData}개 검색결과</span>
-      {pathname === "/school" && (
+      {pathname.startsWith("/school") && (
         <Select
           value={searchParams.get("sortBy") || "students"}
           onValueChange={(value) => handleSelectSortBy(value)}

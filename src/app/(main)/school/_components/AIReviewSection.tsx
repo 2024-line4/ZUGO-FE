@@ -3,43 +3,36 @@
 import Image from "next/image";
 import style from "../[id]/schoolInfo.module.scss";
 import MORE_BTN from "/public/more_btn.svg";
-import { useState } from "react";
 import classNames from "classnames";
+import { AIReviewType } from "@/types/ReviewType";
 
 type Props = {
-  reviews: string[];
+  AIreviews: AIReviewType;
 };
 
-export default function AIReviewSection({ reviews }: Props) {
-  const [visibleCount, setVisibleCount] = useState<number>(3);
-
-  const handleVisibleCount = () => {
-    if (visibleCount >= reviews.length) {
-      setVisibleCount(3);
-      return;
-    }
-
-    setVisibleCount((prev) => prev + 3);
-  };
-
+export default function AIReviewSection({ AIreviews }: Props) {
+  console.log(AIreviews);
   return (
     <section className={style.AIReviewSection}>
       <div className={style.AIReviewBoxWrapper}>
         <h2 className="mb-[10px] w-fit text-[25px] font-[600]">AI 후기</h2>
         <ul className={style.reviewBox}>
-          {reviews.slice(0, visibleCount).map((e, i) => (
-            <li key={i}>{e}</li>
-          ))}
-          {reviews.length >= 3 && (
-            <button
-              onClick={handleVisibleCount}
-              className={classNames(style.moreBtn, {
-                [style.fold]: visibleCount >= reviews.length,
-              })}
-            >
-              <Image src={MORE_BTN.src} alt="more" fill />
-            </button>
-          )}
+          <li>
+            <h2>준비사항: </h2>
+            <div>{AIreviews.before_departure}</div>
+          </li>
+          <li>
+            <h2>도착 및 수업:</h2>
+            <div>{AIreviews.class}</div>
+          </li>
+          <li>
+            <h2>학교생활:</h2>
+            <div>{AIreviews.life}</div>
+          </li>
+          <li>
+            <h2>총평:</h2>
+            <div>{AIreviews.review}</div>
+          </li>
         </ul>
       </div>
     </section>
