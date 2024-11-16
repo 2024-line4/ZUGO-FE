@@ -74,7 +74,7 @@
 
     .AIReviewBoxWrapper {
         flex-shrink: 1;
-        width: 908px;
+        width: 1000px;
         margin-top: 42px;
         position: relative;
 
@@ -88,7 +88,7 @@
             max-width: 200px;
             width: calc(200px + (100vw - 1280px) * 0.1);
             aspect-ratio: 1/1;
-            left: -275px;
+            left: -260px;
             top: 100px;
         }
 
@@ -138,6 +138,14 @@
                 margin-left: 40px;
                 margin-bottom: 13px;
                 margin-right: 10px;
+                display: flex;
+
+                h2 {
+                    font-weight: 500;
+                    margin-right: 5px;
+                    word-break: keep-all;
+                    white-space: nowrap;
+                }
             }
         }
 

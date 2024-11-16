@@ -21,43 +21,36 @@ const allReviews = {
   totalRate: 3,
   reviews: [
     {
-      date: "2023년 1학기",
       rate: 5,
       review:
         "소규모 클래스 형태로 진행되며, 토론과 발표가 중심이 되어 적극적으로 의견을 나누며 배울 수 있었습니다.",
     },
     {
-      date: "2023년 1학기",
       rate: 2,
       review:
         "소규모 클래스 형태로 진행되며, 토론과 발표가 중심이 되어 적극적으로 의견을 나누며 배울 수 있었습니다.",
     },
     {
-      date: "2023년 1학기",
       rate: 1,
       review:
         "소규모 클래스 형태로 진행되며, 토론과 발표가 중심이 되어 적극적으로 의견을 나누며 배울 수 있었습니다.",
     },
     {
-      date: "2023년 1학기",
       rate: 1,
       review:
         "소규모 클래스 형태로 진행되며, 토론과 발표가 중심이 되어 적극적으로 의견을 나누며 배울 수 있었습니다.",
     },
     {
-      date: "2023년 1학기",
       rate: 1,
       review:
         "소규모 클래스 형태로 진행되며, 토론과 발표가 중심이 되어 적극적으로 의견을 나누며 배울 수 있었습니다.",
     },
     {
-      date: "2023년 1학기",
       rate: 1,
       review:
         "소규모 클래스 형태로 진행되며, 토론과 발표가 중심이 되어 적극적으로 의견을 나누며 배울 수 있었습니다.",
     },
     {
-      date: "2023년 1학기",
       rate: 1,
       review:
         "소규모 클래스 형태로 진행되며, 토론과 발표가 중심이 되어 적극적으로 의견을 나누며 배울 수 있었습니다.",
@@ -68,13 +61,14 @@ const allReviews = {
 export default async function SchoolInfo({ params }: Props) {
   const { id } = await params;
   // 이후에 이 id를 가지고 fetch 해야함
-  const data = await getSchoolInfo(id);
-  console.log(data);
+  const data = await getSchoolInfo(decodeURIComponent(id));
+
   return (
     <>
       <MetaData importedFrom="school" data={data} id={id} />
       <AIReviewSection AIreviews={data.info.ai_review} />
-      <AllReviewSection allReviews={allReviews} />
+      {/* @ts-ignore */}
+      <AllReviewSection all_review={data.info.all_review} />
     </>
   );
 }

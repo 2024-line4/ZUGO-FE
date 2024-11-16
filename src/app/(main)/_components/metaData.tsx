@@ -33,12 +33,12 @@ export default function MetaData({ importedFrom, data, id }: Props) {
         <div className={style.name}>
           {isDormitoryInfo(importedFrom, data) ? (
             <h2 className="w-[80%] break-words text-center text-[#222499]">
-              {id}
+              {decodeURIComponent(id)}
             </h2>
           ) : (
             <>
               <span className="mr-[10px] text-[#222499]">미국</span>
-              <span className="text-[#4E4E4E]">{id}</span>
+              <span className="text-[#4E4E4E]">{decodeURIComponent(id)}</span>
             </>
           )}
         </div>
@@ -54,7 +54,7 @@ export default function MetaData({ importedFrom, data, id }: Props) {
 
               <div>
                 <span className={style.infoTag}>홈페이지: </span>
-                <Link href={data.meta_data.homepage}>
+                <Link href={`https://${data.meta_data.homepage}`}>
                   {data.meta_data.homepage}
                 </Link>
               </div>

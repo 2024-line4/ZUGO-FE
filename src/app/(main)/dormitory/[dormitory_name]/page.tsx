@@ -18,14 +18,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function page({ params }: Props) {
   const { dormitory_name } = await params;
-  const { info } = await getDormitoryInfo(dormitory_name);
+  const { info } = await getDormitoryInfo(decodeURIComponent(dormitory_name));
+  console.log(decodeURIComponent(dormitory_name));
   console.log(info);
 
   return (
     <>
-      <MetaData importedFrom="dormitory" data={info} id={dormitory_name} />
+      {/* <MetaData importedFrom="dormitory" data={info} id={dormitory_name} /> */}
       <LocationInfo id={dormitory_name} />
-      <DormitoryReview review={info.review} />
+      {/* <DormitoryReview review={info.review} /> */}
     </>
   );
 }

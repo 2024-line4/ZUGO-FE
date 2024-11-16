@@ -22,11 +22,11 @@ export type SchoolInfoType = {
       life: string;
       review: string;
     };
-    all_review: {
-      before_departure: string;
-      class: string;
-      life: string;
-      review: string;
-    }[];
   };
+  all_review: {
+    before_departure: string;
+    class: string;
+    life: string;
+    review: string;
+  }[];
 };

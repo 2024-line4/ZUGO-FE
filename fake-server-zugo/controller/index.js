@@ -71,7 +71,7 @@ const getSchoolSearch = (req, res) => {
 
   try {
     const { query } = req.query;
-    // schools = schools.filter((sch) => sch.id.includes(query));
+    schools = schools.filter((sch) => sch.id.includes(query));
 
     schools = schools.map((e) => ({
       id: e.id,

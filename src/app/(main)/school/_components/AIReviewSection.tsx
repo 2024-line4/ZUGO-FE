@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import style from "../[id]/schoolInfo.module.scss";
-import MORE_BTN from "/public/more_btn.svg";
-import classNames from "classnames";
 import { AIReviewType } from "@/types/ReviewType";
 
 type Props = {
@@ -11,7 +9,6 @@ type Props = {
 };
 
 export default function AIReviewSection({ AIreviews }: Props) {
-  console.log(AIreviews);
   return (
     <section className={style.AIReviewSection}>
       <div className={style.AIReviewBoxWrapper}>
